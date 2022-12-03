@@ -1,0 +1,120 @@
+/* li {
+  list-style: none;
+}
+body {
+  margin: 0;
+}
+a img {
+  inline-size: 100%;
+  aspect-ratio: 16 / 9; // need to find a solution for this
+  object-fit: cover;
+}
+
+
+
+header nav {
+  background-color: rgb(255, 33, 76);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+header nav img {
+  width: 73px;
+  height: 73px;
+  margin-left: 20px;
+}
+
+header nav ul {
+  display: flex;
+  align-items: center;
+}
+
+header nav ul li {
+  margin-right: 50px;
+}
+
+header nav ul li a {
+  list-style: none;
+  color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* section > nav {
+  display: grid;
+  grid-template-rows: min-content ;
+  grid-auto-flow: column;
+  grid-auto-columns: 21%;
+  
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  
+} */
+
+* {
+  font-family: 'Sono', sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: rgb(230, 229, 230);
+}
+
+li {
+  list-style: none;
+}
+
+/* img {
+  float: left;
+  width:  25%;
+  height: auto;
+  object-fit: contain;
+} */
+
+img {
+  width: 267px;
+  height: 396px;
+  /* border-radius: 10px 10px 0 0; */
+  object-fit: cover;
+  object-position: top;
+}
+
+/* header */
+
+header nav {
+  padding-top: 2em;
+  padding-bottom: 1em;
+  box-shadow: 0 0 2em rgba(0, 0, 0, 0.2);
+  border-radius: 0 0 4em 4em;
+  background-color: #ffffff;
+}
+
+
+header nav ul {
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 0;
+}
+
+
+header nav ul li img {
+  width: 2.5em;
+  height: 2.5em;
+}
+
+
+
