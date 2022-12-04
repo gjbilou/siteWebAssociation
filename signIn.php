@@ -1,3 +1,8 @@
+<?php
+require_once("assets/php/lang.php");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,32 +18,56 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/signIn.css">
 
-  <script type="module" src="assets/javascript/signIn.js"></script>
+  <script defer type="module" src="assets/javascript/signIn.js"></script>
   <title>Admin Page - Movies Association</title>
 </head>
 
 <body>
   <?php require_once 'assets/php/navBar.php'; ?>
   <main>
-    <section>
-      <h1>Sign In Form</h1>
-      <form action="signInForm.php" method="post">
-        <label for="username0">Email</label>
-        <input type="email" name="username0" id="username0" placeholder="Email">
+    <?php
+    // var_dump($_GET);
+    if (isset($_GET['sif']) && $_GET['sif'] == "false") :
+    ?>
+      <section>
+        <h1><?= $trad['sign_form'][1] ?></h1>
+        <form action="assets/php/signInForm.php" method="post">
+          <label for="username0">Email</label>
+          <input type="email" name="username0" id="username0" placeholder="Email" class="error">
 
-        <label for="password0">Password</label>
-        <input type="password" name="password0" id="password0" placeholder="Password">
-        <button type="submit">Sign In</button>
-      </form>
-    </section>
+          <label for="password0"><?= $trad['sign_form'][3] ?></label>
+          <input type="password" name="password0" id="password0" placeholder="<?= $trad['sign_form'][3] ?>" class="error">
+          <button type="submit"><?= $trad['sign_form'][4] ?></button>
+        </form>
+      </section>
+
+    <?php
+
+    else :
+    ?>
+      <section>
+        <h1><?= $trad['sign_form'][1] ?></h1>
+        <form action="assets/php/signInForm.php" method="post">
+          <label for="username0">Email</label>
+          <input type="email" name="username0" id="username0" placeholder="Email">
+
+          <label for="password0"><?= $trad['sign_form'][3] ?></label>
+          <input type="password" name="password0" id="password0" placeholder="<?= $trad['sign_form'][3] ?>">
+          <button type="submit"><?= $trad['sign_form'][4] ?></button>
+        </form>
+      </section>
+
+    <?php
+    endif;
+    ?>
     <section>
-      <h1>Sign Up Form</h1>
-      <form action="signInForm.php" method="post">
+      <h1><?= $trad['sign_form'][2] ?></h1>
+      <form action="assets/php/signUpForm.php" method="post" id="sup">
         <label for="username1">Email</label>
         <input type="email" name="username1" id="username1" placeholder="Email">
-        <label for="password1">Password</label>
-        <input type="password" name="password1" id="password1" placeholder="Password">
-        <button type="submit">Sign Up</button>
+        <label for="password1"><?= $trad['sign_form'][3] ?></label>
+        <input type="password" name="password1" id="password1" placeholder="<?= $trad['sign_form'][3] ?>">
+        <button type="submit" id="button_sup"><?= $trad['sign_form'][5] ?></button>
       </form>
     </section>
   </main>

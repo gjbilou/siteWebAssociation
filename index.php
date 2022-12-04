@@ -1,5 +1,6 @@
 <?php
-require_once("assets/php/lang.php")
+require_once("assets/php/lang.php");
+$pof = NULL;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,13 +26,12 @@ require_once("assets/php/lang.php")
       <h2><?= $trad['header_title']['first_title']?></h2>
       <ul>
         <?php
-        $path = dirname(__FILE__);
-
-        $pdo = new PDO("sqlite:$path/assets/bdd/bddFilm.sqlite");
+        require_once('assets/php/database.php');
 
         try {
-          $request = $pdo->query("SELECT * from film");
-          $film = $request->fetchAll();
+          
+          $request = new Database();
+          $film = $request->getFilms();
           // print_r($film);
         } catch (PDOException $error) {
           echo "Connection failed :" . $error->getMessage();
@@ -41,7 +41,7 @@ require_once("assets/php/lang.php")
             // print_r($movie);
         ?>
             <li>
-              <a href="details.php?pof=<?= $movie['chemin'] ?>"><img src="assets/img/moviesToDisplay/<?= $movie['chemin'] ?>" alt="<?= $trad['alt'][$movie['id']]?>"></a>
+              <a href="details.php<?= $lang?>&pof=<?= $movie['chemin'] ?>"><img src="assets/img/moviesToDisplay/<?= $movie['chemin'] ?>" alt="<?= $trad['alt'][$movie['id']]?>"></a>
             </li>
         <?php
           }
@@ -59,13 +59,12 @@ require_once("assets/php/lang.php")
             // print_r($movie);
         ?>
             <li>
-              <a href="details.php?pof=<?= $movie['chemin'] ?>"><img src="assets/img/moviesToDisplay/<?= $movie['chemin'] ?>" alt="<?= $trad['alt'][$movie['id']]?>"></a>
+              <a href="details.php<?= $lang?>&pof=<?= $movie['chemin'] ?>"><img src="assets/img/moviesToDisplay/<?= $movie['chemin'] ?>" alt="<?= $trad['alt'][$movie['id']]?>"></a>
             </li>
         <?php
           }
         endforeach;
         ?>
-
       </ul>
     </section>
   </main>

@@ -1,30 +1,26 @@
 
-// form 0
-const username0 = document.getElementById('username0')
-const verifEmail0 = function() {
-  if (!/^[a-z0-9.-_]+@[a-z0-9.-_]+\.[a-z]{2,}$/.test(username0.value)) {
-    username0.classList.add('error')
-  } else {
-    username0.classList.remove('error')
-  }
-}
+const form = document.getElementById('sup')
 
-username0.addEventListener('input', verifEmail0)
-
+form.addEventListener('submit', function (event) {
+  event.preventDefault()
   
-
-
-
-
-// form 1
-const username1 = document.getElementById('username1')
-const verifEmail1 = function() {
-  if (!/^[a-z0-9.-_]+@[a-z0-9.-_]+\.[a-z]{2,}$/.test(username1.value)) {
-    username1.classList.add('error')
-  } else {
-    username1.classList.remove('error')
+  const email = document.getElementById('username1')
+  const password = document.getElementById('password1')
+  var errors
+  
+  if (email.value === null ||
+    !/[a-z0-9-_.]+@[a-z0-9-_.]+\.[a-z]{2,}/.test(email.value)) {
+      event.preventDefault()
+      email.classList.add('error')
+      errors = true
   }
-}
-
-username1.addEventListener('input', verifEmail1)
+  if (password.value === null || password.value.length <= 8)  {
+    event.preventDefault()
+    password.classList.add('error')
+    errors = true
+  }
+  if (!errors) {
+    this.submit()
+  }
+})
 

@@ -29,7 +29,7 @@ button:hover {
   box-shadow: 0 0 2em rgba(0, 0, 0, 0.2);
   color: #fff;
   letter-spacing: 0.2em;
-  cursor: pointer;
+  cursor: pointer;  
 }
 
 main {
@@ -71,6 +71,9 @@ main section form {
 
 .error {
   background-color: rgb(233, 119, 114);
+  border-radius: 0.25em;
+  height: 1.5em;
+  padding: 1em;
   border: none;
   opacity: 0.8;
 }

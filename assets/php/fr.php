@@ -33,6 +33,13 @@ $trad = [
     '11' => "Cela fait dix ans que Giselle (Amy Adams) et Robert (Patrick Dempsey) se sont mariés, mais Giselle est désillusionnée par la vie en ville. Ils déménagent donc leur famille grandissante dans la communauté de Monroeville, une banlieue tranquille, à la recherche d'une vie plus féerique. Malheureusement, ce n'est pas la solution miracle qu'elle avait espérée. La banlieue a de toutes nouvelles règles et une reine des abeilles locale, Malvina Monroe (Maya Rudolph), qui fait que Giselle ne se sent pas à sa place. Frustrée que son bonheur ne soit pas si facile à trouver, elle se tourne vers la magie de l'Andalousie pour obtenir de l'aide, transformant accidentellement la ville entière en un véritable conte de fées et mettant en péril le bonheur futur de sa famille. Maintenant, Giselle est dans une course contre la montre pour inverser le sort et déterminer ce que signifie vraiment le bonheur pour elle et sa famille.",
     '12' => "Un plombier nommé Mario voyage dans un labyrinthe souterrain avec son frère, Luigi, pour tenter de sauver une princesse capturée.",  
   ],
+  'sign_form' => [
+    '1' => 'Se Connecter',
+    '2' => "S'inscrire",
+    '3' => 'Mot de passe',
+    '4' => 'Connexion',
+    '5' => 'Inscription'
+  ]
 
 
 ];

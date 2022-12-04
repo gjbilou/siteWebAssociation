@@ -20,6 +20,13 @@ $trad = [
     'second_title' => 'Latest Releases',
   ],
 
+  'sign_form' => [
+    '1' => 'Sign In Form',
+    '2' => 'Sign Up Form',
+    '3' => 'Password',
+    '4' => 'Sign In',
+    '5' => 'Sign Up'
+  ]
 ];
 
 

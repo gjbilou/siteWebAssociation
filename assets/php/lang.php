@@ -25,6 +25,4 @@
     header($url.$page.$lang);
   }
 
-
-
 ?>

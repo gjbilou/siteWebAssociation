@@ -1,5 +1,5 @@
 <?php
-
+require_once("assets/php/lang.php");
 
 $path = dirname(__FILE__);
 
@@ -38,7 +38,8 @@ try {
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.9.96/css/materialdesignicons.min.css">
 
   <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/index.css">
+  <link rel="stylesheet" href="assets/css/details.css">
+
 </head>
 
 <body>
@@ -46,7 +47,15 @@ try {
   <article>
     <h1><?= $film['nom'] ?></h1>
     <img src="assets/img/moviesToDisplay/<?= $film['chemin'] ?>" alt="">
-    <p><?= $film['description'] ?></p>
+    <p><?php
+    if ($lang == '?lang=en') { 
+      echo $film['description'];
+    }
+    else if ($lang == '?lang=fr')
+    {
+      echo $trad['description'][$film['id']];
+    }
+     ?></p>
   </article>
 </body>
 
