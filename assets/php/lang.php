@@ -1,6 +1,6 @@
 <?php
 
-  $url = "http://localhost:3000";
+  $url = "http://localhost:8000";
   $page = explode('?', $_SERVER['REQUEST_URI'])[0];
   $lang = '?lang=en';
 
